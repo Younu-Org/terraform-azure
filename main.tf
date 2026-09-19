@@ -1,6 +1,8 @@
+resource "aws_instance" "example" {
+  ami           = "ami-123456"
+  instance_type = "t2.micro"
 
-resource "null_resource" "example" {
-  provisioner "local-exec" {
-    command = "echo Hello from Terraform"
+  tags = {
+    Name = "new-name"
   }
 }
